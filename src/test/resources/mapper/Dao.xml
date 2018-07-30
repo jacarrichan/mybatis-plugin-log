@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="dao.IUserDao">
+    <!-- 根据用户名和密码查找用户 -->
+    <select id="selectInventory" resultType="map" parameterType="map">
+        select *  from inventory WHERE  itemid=#{itemid} or qty=#{qty}
+    </select>
+    <select id="selectItem" resultType="map" parameterType="map">
+        select *  from item WHERE  itemid=#{itemid} or listprice=#{listprice}
+    </select>
+</mapper>
